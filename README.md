@@ -13,7 +13,7 @@ llm-accessible: true
 
 ![brain](brain.gif)
 
-Whether you're up or you're down, just StayLearning. 
+Whether you're up or down, just StayLearning. 
 
 An index of learning examples to help friends. 
 
