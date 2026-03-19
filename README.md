@@ -44,8 +44,8 @@ This document is designed to serve as a navigable index for humans, LLMs, and MC
 ## How to Use This Index
 
 - Each entry below describes one repository, its purpose, and the key concepts it demonstrates.
-- All repositories follow the naming convention `st-learning-<topic>` and are owned by [bhf](https://github.com/bhf).
-- Repositories marked `[private]` require access to the `bhf` GitHub account.
+- All repositories follow the naming convention `st-learning-<topic>`
+- Repositories marked `[private]` require access rights.
 - The base template repository is [`st-learning-base`](#st-learning-base) — use it to bootstrap new examples.
 
 ---
