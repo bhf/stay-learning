@@ -13,7 +13,13 @@ llm-accessible: true
 
 ![brain](brain.gif)
 
-An index of Java learning example repositories created by [@bhf](https://github.com/bhf). Each repository isolates a specific Java library, API, or technique and demonstrates it with minimal, runnable examples. This document is designed to serve as a navigable index for humans, LLMs, and MCP tools.
+StayTuned & StayLearning. 
+
+An index of learning examples to help friends. 
+
+Each repository isolates a specific library, API, or technique and demonstrates it with minimal, runnable examples. 
+
+This document is designed to serve as a navigable index for humans, LLMs, and MCP tools.
 
 ---
 
