@@ -1,77 +1,34 @@
-# Copilot Instructions
+# Copilot Instructions for `stay-learning` Index Repository
 
-## What this repository is
+This repository acts as the central meta-index for `stay-learning-*` repositories (owned by `bhf`). It tracks individual, targeted learning repositories across various languages and patterns.
 
-`st-learning` is a **meta/index repository** — it contains no Java source code. Its only artifacts are:
+## Repository Architecture & Core Files
 
-- `README.md` — human- and LLM-readable index of all `st-learning-*` repos
-- `st-learning-index.json` — machine-readable repo manifest consumed by MCP tools and agents
-- `brain.gif` — header image
+- **`README.md`**: The primary human and LLM entry point. It serves as an aggregated index of all known topic repositories.
+- **`st-learning-index.json`**: The machine-readable source of truth.
+- Both files **must** stay perfectly synchronized. If a repository is added to the generic JSON list, it MUST have a corresponding entry in the `README.md`.
 
-Do not add Java files, Gradle build files, or source code here.
+## Naming & Indexing Conventions
 
-## Repository family
+- **Repository Naming**: Individual repositories strictly follow the pattern `stay-learning-<topic>`.
+- **Delegation of Responsibility**: Do **not** place run, build, or deployment instructions in this meta-index `README.md`. Application-specific commands belong in the individual repo's README.
+- **Topics**: Sub-repository topics should be included in `st-learning-index.json` under the `"topics"` array and visualized concisely in the `README.md` as inline code blocks (e.g., `**Topics:** \`java\` \`streams\``).
 
-All repos are owned by `bhf` and follow the naming convention `st-learning-<topic>`. Discover them via:
-- The Quick Reference table in `README.md`
-- `st-learning-index.json` (authoritative machine-readable list)
-- GitHub search: `user:bhf st-learning`
+## Strict `README.md` Structure
 
-Two repos are private (`st-learning-jpms`, `st-learning-base`) and require authenticated GitHub access.
+When modifying `README.md`, you **must preserve** the following exact section order:
 
-## Adding a new repo to the index
+1. **HTML comment metadata block** (for indexing purposes)
+2. **Badge + title + `brain.gif` + tagline**
+3. **`## Table of Contents`**
+4. **`## How to Use This Index`**
+5. **`## Repository Index`** (Contains one `###` section per repository)
+   - Must use the format: `### [stay-learning-<topic>](https://github.com/bhf/stay-learning-<topic>)`
+   - Must include `**Topics:**` followed by a concise description
+6. **`## Quick Reference`** (Summary table)
+7. **`## For LLMs and MCP Tools`**
 
-When a new `st-learning-*` repo is created, update **both** files consistently:
+## Developer Workflows
 
-1. **`README.md`** — add a new `###` section under `## Repository Index` following the existing pattern:
-   ```markdown
-   ### [st-learning-<topic>](https://github.com/bhf/st-learning-<topic>)
-
-   **Topics:** `java` `<topic>` `...`
-
-   One-paragraph description of what is demonstrated.
-
-   **Key classes / examples:** (table or bullet list)
-   ```
-   Also add a row to the Quick Reference table and a ToC entry.
-
-2. **`st-learning-index.json`** — add a corresponding object:
-   ```json
-   {
-     "name": "st-learning-<topic>",
-     "url": "https://github.com/bhf/st-learning-<topic>",
-     "topics": ["java", "<topic>"],
-     "private": false
-   }
-   ```
-
-README and JSON must always be in sync — same repos, same visibility flags.
-
-## Child repo conventions
-
-Every `st-learning-*` example repo follows these conventions:
-
-- **Language:** Java, JDK 21+ (some repos target JDK 24)
-- **Build tool:** Gradle (Kotlin DSL preferred; some use Groovy DSL)
-- **Standard commands:** `./gradlew build`, `./gradlew test`
-- **Package root:** `com.bhf.learning.<topic>`
-- **Bootstrap template:** Use `st-learning-base` (private) when creating a new repo
-
-Do not include run instructions in README index entries — link to the individual repo README instead.
-
-Every child repo README must include the StayTuned brand badge as the very first line, before the `#` title:
-```markdown
-<a id="top"></a>
-[![StayTuned](https://img.shields.io/badge/~%24-StayTuned_-000000?style=flat&labelColor=000000&color=000000)](https://sanjeev.pages.dev)
-```
-
-## README structure conventions
-
-Section order must be preserved:
-1. HTML comment metadata block (front matter for tools)
-2. Badge + title + `brain.gif` + tagline
-3. Table of Contents
-4. How to Use This Index
-5. Repository Index (one `###` per repo)
-6. Quick Reference (summary table)
-7. For LLMs and MCP Tools (link to `st-learning-index.json`)
+- **Updating the Index**: The primary automation workflow relies on `.github/prompts/update-index.prompt.md`. This prompt instructs an AI agent to query GitHub via `gh repo list bhf` and `gh api`, fetch unseen `stay-learning-*` READMEs, and generate the proper entries in both `st-learning-index.json` and `README.md`.
+- Ensure changes pass manual inspection to confirm that `private` flags, URIs, and descriptions correctly align between the JSON and Markdown files.

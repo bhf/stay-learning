@@ -1,44 +1,32 @@
 [
   {
-    "name": "st-learning-java-streams",
-    "url": "https://github.com/bhf/st-learning-java-streams",
-    "topics": ["java", "streams", "collectors", "functional-programming"],
+    "name": "stay-learning-java",
+    "url": "https://github.com/bhf/stay-learning-java",
+    "topics": ["java"],
     "private": false
   },
   {
-    "name": "st-learning-java-arenas",
-    "url": "https://github.com/bhf/st-learning-java-arenas",
-    "topics": ["java", "arenas", "foreign-memory", "jdk24"],
+    "name": "stay-learning-typescript",
+    "url": "https://github.com/bhf/stay-learning-typescript",
+    "topics": ["typescript"],
     "private": false
   },
   {
-    "name": "st-learning-spi",
-    "url": "https://github.com/bhf/st-learning-spi",
-    "topics": ["java", "spi", "serviceloader", "design-patterns"],
+    "name": "stay-learning-rust",
+    "url": "https://github.com/bhf/stay-learning-rust",
+    "topics": ["rust"],
     "private": false
   },
   {
-    "name": "st-learning-jpms",
-    "url": "https://github.com/bhf/st-learning-jpms",
-    "topics": ["java", "jpms", "jlink", "modules", "docker"],
-    "private": true
-  },
-  {
-    "name": "st-learning-mapstruct",
-    "url": "https://github.com/bhf/st-learning-mapstruct",
-    "topics": ["java", "mapstruct", "object-mapping", "dto", "records"],
+    "name": "stay-learning-python",
+    "url": "https://github.com/bhf/stay-learning-python",
+    "topics": ["python"],
     "private": false
   },
   {
-    "name": "st-learning-jackson",
-    "url": "https://github.com/bhf/st-learning-jackson",
-    "topics": ["java", "jackson", "json", "serialization", "streaming", "polymorphism", "java-time"],
+    "name": "stay-learning-design-patterns",
+    "url": "https://github.com/bhf/stay-learning-design-patterns",
+    "topics": ["design-patterns", "architecture"],
     "private": false
-  },
-  {
-    "name": "st-learning-base",
-    "url": "https://github.com/bhf/st-learning-base",
-    "topics": ["java", "gradle", "template"],
-    "private": true
   }
 ]

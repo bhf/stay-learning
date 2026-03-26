@@ -1,9 +1,9 @@
 ---
 mode: agent
-description: Scan for new st-learning-* repos and update the index README and JSON
+description: Scan for new stay-learning-* repos and update the index README and JSON
 ---
 
-You are updating the `st-learning` index repository. Your job is to discover any `st-learning-*` repositories owned by `bhf` that are not yet listed in `st-learning-index.json`, fetch their READMEs, and update both index files accordingly.
+You are updating the `stay-learning` index repository. Your job is to discover any `stay-learning-*` repositories owned by `bhf` that are not yet listed in `st-learning-index.json`, fetch their READMEs, and update both index files accordingly.
 
 ## Steps
 
@@ -11,7 +11,7 @@ You are updating the `st-learning` index repository. Your job is to discover any
    ```
    gh repo list bhf --limit 100 --json name,description,url,isPrivate
    ```
-   Filter to those whose `name` starts with `st-learning-`.
+   Filter to those whose `name` starts with `stay-learning-`.
 
 2. **Compare against the current index** by reading `st-learning-index.json`. Identify any repos present in GitHub but absent from the JSON — these are new repos to add.
 
@@ -19,13 +19,13 @@ You are updating the `st-learning` index repository. Your job is to discover any
    ```
    gh api repos/bhf/<name>/readme --jq '.content' | base64 -d
    ```
-   Read the README to understand: what the repo demonstrates, its key classes/packages/examples, and any notable requirements (e.g. JDK version).
+   Read the README to understand: what the repo demonstrates, its key concepts, and any notable requirements (e.g. language version, framework).
 
 4. **Update `st-learning-index.json`** — append a new object for each new repo following this schema:
    ```json
    {
-     "name": "st-learning-<topic>",
-     "url": "https://github.com/bhf/st-learning-<topic>",
+     "name": "stay-learning-<topic>",
+     "url": "https://github.com/bhf/stay-learning-<topic>",
      "topics": ["java", "<topic>", "..."],
      "private": <true|false>
    }
@@ -35,13 +35,11 @@ You are updating the `st-learning` index repository. Your job is to discover any
    - A **ToC entry** under the appropriate heading in `## Table of Contents`
    - A **`###` section** under `## Repository Index` following this pattern:
      ```markdown
-     ### [st-learning-<topic>](https://github.com/bhf/st-learning-<topic>)
+     ### [stay-learning-<topic>](https://github.com/bhf/stay-learning-<topic>)
 
-     **Topics:** `java` `<topic>` `...`
+     **Topics:** `<topic>` `...`
 
      One-paragraph description of what is demonstrated.
-
-     **Key classes / examples:** (table or bullet list derived from the repo README)
 
      ---
      ```
