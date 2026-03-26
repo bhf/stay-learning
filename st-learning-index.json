@@ -30,6 +30,12 @@
     "private": false
   },
   {
+    "name": "st-learning-jackson",
+    "url": "https://github.com/bhf/st-learning-jackson",
+    "topics": ["java", "jackson", "json", "serialization", "streaming", "polymorphism", "java-time"],
+    "private": false
+  },
+  {
     "name": "st-learning-base",
     "url": "https://github.com/bhf/st-learning-base",
     "topics": ["java", "gradle", "template"],
