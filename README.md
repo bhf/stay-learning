@@ -30,10 +30,10 @@ This document is designed to serve as a navigable index for humans, LLMs, and MC
   - [How to Use This Index](#how-to-use-this-index)
   - [Repository Index](#repository-index)
     - [stay-learning-java](#stay-learning-java)
-    - [stay-learning-typescript](#stay-learning-typescript)
-    - [stay-learning-rust](#stay-learning-rust)
-    - [stay-learning-python](#stay-learning-python)
-    - [stay-learning-design-patterns](#stay-learning-design-patterns)
+    - [stay-learning-typescript *(Coming Soon)*](#stay-learning-typescript-coming-soon)
+    - [stay-learning-rust *(Coming Soon)*](#stay-learning-rust-coming-soon)
+    - [stay-learning-python *(Coming Soon)*](#stay-learning-python-coming-soon)
+    - [stay-learning-design-patterns *(Coming Soon)*](#stay-learning-design-patterns-coming-soon)
   - [Quick Reference](#quick-reference)
   - [For LLMs and MCP Tools](#for-llms-and-mcp-tools)
     - [Machine-readable repo list](#machine-readable-repo-list)
@@ -58,7 +58,7 @@ A meta-index for all Java related learning repositories, covering fundamental fe
 
 ---
 
-### [stay-learning-typescript](https://github.com/bhf/stay-learning-typescript)
+### [stay-learning-typescript](https://github.com/bhf/stay-learning-typescript) *(Coming Soon)*
 
 **Topics:** `typescript`
 
@@ -66,7 +66,7 @@ A meta-index for all TypeScript related learning repositories, showcasing langua
 
 ---
 
-### [stay-learning-rust](https://github.com/bhf/stay-learning-rust)
+### [stay-learning-rust](https://github.com/bhf/stay-learning-rust) *(Coming Soon)*
 
 **Topics:** `rust`
 
@@ -74,7 +74,7 @@ A meta-index for all Rust related learning repositories, demonstrating memory sa
 
 ---
 
-### [stay-learning-python](https://github.com/bhf/stay-learning-python)
+### [stay-learning-python](https://github.com/bhf/stay-learning-python) *(Coming Soon)*
 
 **Topics:** `python`
 
@@ -82,7 +82,7 @@ A meta-index for all Python related learning repositories, covering scripting, d
 
 ---
 
-### [stay-learning-design-patterns](https://github.com/bhf/stay-learning-design-patterns)
+### [stay-learning-design-patterns](https://github.com/bhf/stay-learning-design-patterns) *(Coming Soon)*
 
 **Topics:** `design-patterns` `architecture`
 
